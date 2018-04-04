@@ -1,4 +1,4 @@
-class Sample {
+export class Sample {
   constructor() {
     
   }
