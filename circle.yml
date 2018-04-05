@@ -18,12 +18,16 @@ jobs:
 
     steps:
       - checkout
+      - run: yarn install
 
-      - run: npm install
-      - run: sudo npm install -g typescript
-      - run: tsc
-        
+  test:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:7.10
+    steps:
+      - checkout
       # run tests!
+      - run: yarn install
       - run: mocha built/test/**/*.js
 
 
