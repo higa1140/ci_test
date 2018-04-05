@@ -20,7 +20,7 @@ jobs:
       - checkout
 
       - run: npm install
-
+      - run: npm install -g typescript
       - run: tsc
         
       # run tests!
